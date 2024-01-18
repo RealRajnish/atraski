@@ -1,0 +1,25 @@
+.main{
+    background-color: #333;
+    color: white;
+}
+
+.contact-main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 25rem;
+    /* width: 25rem; */
+    background-color: rgb(59, 58, 57);
+    gap: 1rem;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.socials{
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 2.4rem;
+}
