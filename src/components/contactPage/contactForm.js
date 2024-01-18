@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./contactForm.css";
 import "resize-observer-polyfill";
 
@@ -37,8 +37,31 @@ const ContactForm = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
+  // useRef to hold a reference to the form container
+  const formContainerRef = useRef(null);
+
+  useEffect(() => {
+    const formContainer = formContainerRef.current;
+
+    const resizeObserver = new ResizeObserver(() => {
+      // Handle resize logic here if needed
+      // ...
+
+      // Log a message to indicate resize
+      console.log("Form container resized");
+    });
+
+    // Start observing the form container
+    resizeObserver.observe(formContainer);
+
+    // Clean up the observer when the component is unmounted
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="form-container">
+    <div className="form-container" ref={formContainerRef}>
       <form className="form" onSubmit={handleSubmit}>
         <div className="input-container">
           <label htmlFor="name">NAME</label>

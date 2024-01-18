@@ -1,25 +1,23 @@
-.main{
-    background-color: #333;
-    color: white;
+.main {
+  background-color: #333;
+  color: white;
+  min-height: 100vh;
 }
 
-.contact-main{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 25rem;
-    /* width: 25rem; */
-    background-color: rgb(59, 58, 57);
-    gap: 1rem;
+.contact-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 25rem;
+  /* width: 25rem; */
+  padding: 1rem;
+  background-color: rgb(59, 58, 57);
+  gap: 1rem;
+  overflow: hidden;
 }
 
-h1, h2{
-    text-align: center;
-}
-
-.socials{
-    padding: 2rem;
-    display: flex;
-    gap: 1rem;
-    font-size: 2.4rem;
+h1 {
+  text-align: center;
+  padding: 3rem;
 }

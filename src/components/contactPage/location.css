@@ -1,3 +1,23 @@
-.location{
-    background-color: rgb(78, 54, 54);
+.location {
+  /* background-color: rgb(78, 54, 54); */
+  display: grid;
+  place-content: center;
+  /* padding: 2rem; */
+}
+
+iframe {
+  height: 350px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 667px) {
+  iframe {
+    width: 300px;
+  }
+}
+.socials {
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 2.4rem;
 }
